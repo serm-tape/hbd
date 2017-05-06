@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" integrity="sha256-5+W3JHnvGYIJkVxUBsw+jBi9+pOlu9enPX3vZapXj5M=" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js" integrity="sha256-97Q90i72uoJfYtVnO2lQcLjbjBySZjLHx50DYhCBuJo=" crossorigin="anonymous"></script>
+        <title> This is secret </title>
+        <script>
+            var passcode = '6530'
+            function checkPasscode(){
+                if($('#passcode').val() == passcode){
+                    window.location.href = '/hbd.html'
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div style='width: 100vw; height: 100vh; display: flex'>
+            <div style='text-align: center; margin: auto;'>
+                <i class='icon privacy' style="font-size: 30px"></i><br/>
+                <b> Enter you passcode </b><br/>
+                <div class='ui input'><input id='passcode' type='text'/></div><br/><br/>
+                <button class='ui button positive' onclick='checkPasscode()'> SUBMIT </button>
+            </div>
+        </div>
+    </body>
+</html>

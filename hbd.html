@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" integrity="sha256-5+W3JHnvGYIJkVxUBsw+jBi9+pOlu9enPX3vZapXj5M=" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js" integrity="sha256-97Q90i72uoJfYtVnO2lQcLjbjBySZjLHx50DYhCBuJo=" crossorigin="anonymous"></script>
+        <script>
+            function playHorn(){
+                var horn = document.getElementById('horn')
+                horn.pause()
+                horn.currentTime = 0
+                horn.play()
+            }
+        </script>
+        <style>
+            body, html {
+                height: 100%;
+            }
+
+            .bg { 
+                /* The image used */
+                background-image: url("bg.jpg");
+
+                /* Full height */
+                height: 100%; 
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+            }
+        </style>
+        <title> Happy Birthday! </title>
+    </head>
+    <body class='bg' style='text-align: center; display: flex' onclick='playHorn()'>
+        <div style='margin: auto; background-color: rgba(255,255,255,0.75); padding: 5px'>
+            <h1 id='one'> Happy Birthday! </h1>
+            <h2 id='two'> 6 May 30 </h2>
+            <h3 id='three'> Golf, Ratchasak </h3>
+            <audio src='/hbd.mp3' autoplay loop></audio>
+        </div>
+        <audio id='horn' src='/horn.wav'></audio>
+    </body>
+</html>
